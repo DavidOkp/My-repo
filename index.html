@@ -2,169 +2,346 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device=width, initial-scale=1.0">
         <title>Registaration form</title>
-    </head>
-    <body>
-       <h1>Brighton</h1> 
-       <h2>REGISTRATION FORM</h2>
-       <form>
-        <label for="first-name">FIRST NAME*</span></label>
-        <input type="text" id="first-name" required>
-       </form>
+        <style>
+        body {
+            max-width: 70%;
+            margin-left: 15%;   
+            margin: auto;
+            margin-bottom: 80px;
+            margin-top: 90px;
+        }
 
-       <form>
+        h1 {
+            text-align: right;
+            padding-right: 85px;
+            font-size: 80px;
+            font-family: Brush Script MT;
+            font-weight: 500;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 37px;
+            font-family: Arial, sans-serif;
+            font-weight: 500;
+            margin-top: -27px;
+        }
+
+        hr {
+            margin-top: -30px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 2px;
+            margin-bottom: 15px;
+        }
+
+        .name {
+            display: inline-block;   
+            margin-top: 23px;
+            margin-bottom: 9px;            
+            font-family: Arial, sans-serif;
+            font-size: 13px; 
+            flex: 1; 
+            display: flex;  
+            flex-direction: column;  
+            text-align: center;                          
+        }
+
+        #first-name, #middle-name, #last-name {
+            height: 50px;
+        }
+
+        #dob {
+            font-size: 13px;         
+            font-family: Arial, sans-serif;
+            margin-left: 85px;
+        }
+
+        .dob {
+            margin-left: 85px;
+            margin-right: 10px;  
+            font-size: 13px;         
+            font-family: Arial, sans-serif;                    
+            margin-bottom: 20px;
+            display: flex;
+            gap: 20px;
+            flex: 1;
+        }
+
+        #dob-month, #dob-day, #dob-year {
+            height: 20px;
+        }
+
+       .gender {
+            margin-left: 170px;
+        }
+
+        .phone-number {
+            font-size: 13px;         
+            font-family: Arial, sans-serif;
+            margin-left: 85px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        #phone-number {
+            height: 20px;
+        }
+
+        .email {
+            font-size: 13px;         
+            font-family: Arial, sans-serif;
+            margin-left: 85px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        #email {
+            height: 21px;
+        }
+
+        .address {
+            font-size: 13px;         
+            font-family: Arial, sans-serif;
+            margin-left: 85px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        #address {
+            height: 37px;
+        }
+
+        .cs {
+            display: flex;
+            gap: 0px;
+            margin-bottom: 15px;
+        }
+
+        .place {
+            margin-left: 85px;  
+            font-size: 13px;         
+            font-family: Arial, sans-serif;                    
+            margin-bottom: 20px;
+            display: flex;
+            gap: 2px;
+            flex: 1;
+            flex-direction: column;
+        }
+
+        #city, #state {
+            height: 20px;
+        }
+
+        .mar-job {
+            display: flex;
+            gap: 0px;
+            margin-bottom: 15px;
+        }
+
+        .life {
+            margin-left: 85px;  
+            font-size: 13px;         
+            font-family: Arial, sans-serif;                    
+            margin-bottom: 20px;
+            display: flex;
+            gap: 2px;
+            flex: 1;
+            flex-direction: column;
+        }
+
+        #marital-status, #occupation {
+            height: 30px;
+        }
+
+        .cd-d {
+            display: flex;
+            gap: 0px;
+            margin-bottom: 15px;
+        }
+
+        .digits {
+            margin-left: 85px;  
+            font-size: 13px;         
+            font-family: Arial, sans-serif;                    
+            margin-bottom: 10px;
+            display: flex;
+            gap: 2px;
+            flex: 1;
+            flex-direction: column;
+        }
+
+        #card-number, #date {
+            height: 33px;
+        }
+
+        #socials {
+            font-size: 15px;         
+            font-family: Arial, sans-serif;
+            margin-left: 85px;
+        }
+
+        .socials {
+            font-size: 13px;         
+            font-family: Arial, sans-serif;
+            margin-left: 85px;
+        }
+
+        .foot-cont {
+            padding-top: 90px;
+            font-size: 13px;         
+            font-family: Arial, sans-serif;
+            margin-left: 120px;
+            display: flex;
+            gap: 75px;
+        }
+        
+        #info {
+            height: 10px;
+        }
+
+       </style>
+    </head>
+
+    <body>
+         <h1>Brighton</h1> 
+       <h2>REGISTRATION FORM</h2>
+       <hr>
+       <div class="form-row">
+        <form class="name">
+          <label for="first-name">FIRST NAME*</label>
+          <input type="text" id="first-name" required>
+        </form>
+
+        <form class="name">
             <label for="middle-name">MIDDLE NAME*</label>
             <input type="text" id="middle-name" required>
         </form>
 
-        <form>
+        <form class="name">
             <label for="last-name">LAST NAME*</label>
             <input type="text" id="last-name" required>
         </form>
+       </div>
 
-       <fieldset>
-        <legend>DATE OF BIRTH*</legend>
-        <label for="month">Month</label>
-        <select id="month" name="month" required >
-            <option value=""></option>
-            <option value="01">January</option>
-            <option value="02">February</option>
-            <option value="03">March</option>
-            <option value="04">April</option>
-            <option value="05">May</option>
-            <option value="06">June</option>
-            <option value="07">July</option>
-            <option value="08">August</option>
-            <option value="09">September</option>
-            <option value="10">October</option>
-            <option value="11">November</option>
-            <option value="12">December</option>
-        </select>
+       <p id="dob">DATE OF BIRTH*</p>
+       <div class="dob">
+        <form class="dob-month">
+          <label for="dob-month">Month</label>
+          <input type="text" id="dob-month" required aria-required="true">
+        </form>
 
-        <label for="day">Day</label>
-        <select id="day" name="day" required>
-            <option value=""></option>
-            <option value="01">1</option>
-            <option value="02">2</option>
-            <option value="03">3</option>
-            <option value="04">4</option>
-            <option value="05">5</option>
-            <option value="06">6</option>
-            <option value="07">7</option>
-            <option value="08">8</option>
-            <option value="09">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-            <option value="13">13</option>
-            <option value="14">14</option>
-            <option value="15">15</option>
-            <option value="16">16</option>
-            <option value="17">17</option>
-            <option value="18">18</option>
-            <option value="19">19</option>
-            <option value="20">20</option>
-            <option value="21">21</option>
-            <option value="22">22</option>
-            <option value="23">23</option>
-            <option value="24">24</option>
-            <option value="25">25</option>
-            <option value="26">26</option>
-            <option value="27">27</option>
-            <option value="28">28</option>
-            <option value="29">29</option>
-            <option value="30">30</option>
-            <option value="31">31</option>
-        </select>
+        <form class="dob-day">
+          <label for="dob-day">Day</label>
+          <input type="number" id="dob-day" min="1" max="31" required aria-required="true">
+        </form>
+        
+        <form class="dob-year">
+          <label for="dob-year">Year</label>
+          <input type="number" id="dob-year" name="year" required min="1985" max="2007" minlength="4" maxlength="4" aria-required="true">
+        </form>
 
-        <label for="year">Year</label>
-        <input type="number" id="year" name="year" required min="1985" max="2007" minlength="4" maxlength="4">
-        </select>
+        <form class="gender">
+          <label for="gender">Sex</label>
+          <input type="text" id="gender" required>
+        </form>
+       </div>
 
-        <label for="gender">Sex</label>
-        <select id="gender" name="gender">
-            <option value=""></option>
-            <option value="male">Male</option>
-            <option value="male">Female</option>
-        </select>
-       </fieldset>
-
-       <form>
+       <form class="phone-number">
         <label for="phone-number">PHONE NUMBER*</label>
         <input type="number" id="phone-number" minlength="11" maxlength="11" required>
        </form>
 
-       <form>
+       <form class="email">
         <label for="email">EMAIL*</label>
         <input type="email" id="email" required>
        </form>
 
-       <form>
+       <form class="address">
         <label for="address">ADDRESS</label>
         <input type="text" id="address" name="address" required>
        </form>
 
-       <form>
+      <div class="cs"> 
+       <form class="place">
         <label for="city">CITY</label>
         <input type="text" id="city" name="city" required>
        </form>
 
-       <form>
+       <form class="place">
         <label for="state">STATE</label>
         <input type="text" id="state" name="state" required>
        </form>
-
-       <form>
+      </div>
+       
+      <div class="mar-job">
+       <form class="life">
         <lable for="marital-status">MARITAL STATUS</lable>
-        <select id="marital-status" name="marital-status" required>
-            <option value=""></option>
-            <option value="single">Single</option>
-            <option value="married">Married</option>
-            <option value="divorced">Divorced</option>
-            <option valaue="widowed">Widowed</option>
-        </select>
-       </form>
+        <input type="text" id="marital-status">
+       </form> 
 
-       <form>
+       <form class="life">
         <label for="occupation">OCCUPATION</label>
         <input type="text" id="occupation" name="occupation" required>
        </form>
+      </div> 
 
-       <form>
+      <div class="cd-d">
+       <form class="digits">
         <label for="card-number">CARD NUMBER</label>
         <input type="number" id="card-number" minlength="16" maxlength="16" required>
        </form>
 
-       <form>
+       <form class="digits">
         <label for="date">DATE*</label>
         <input type="date" id="date" name="date" required>
        </form>
+      </div>
 
-       <p>HOW DID YOU KNOW ABOUT US?</p>
+       <p id="socials">HOW DID YOU KNOW ABOUT US?</p>
+       <div class="socials">
+        <label for="about-us">INSTAGRAM</label>
+        <input type="checkbox" id="about-us" name="about-us" value="instagram">
 
-       <label for="about-us">INSTAGRAM</label>
-       <input type="checkbox" id="about-us" name="about-us" value="instagram">
+        <label for="about-us">FACEBOOK</label>
+        <input type="checkbox" id="about-us" name="about-us" value="facebook">
 
-       <label for="about-us">FACEBOOK</label>
-       <input type="checkbox" id="about-us" name="about-us" value="facebook">
+        <label for="about-us">TIKTOK</label>
+        <input type="checkbox" id="about-us" name="about-us" value="tiktok">
 
-       <label for="about-us">TIKTOK</label>
-       <input type="checkbox" id="about-us" name="about-us" value="tiktok">
+        <label for="about-us">GOOGLE</label>
+        <input type="checkbox" id="about-us" name="about-us" value="google">
 
-       <label for="about-us">GOOGLE</label>
-       <input type="checkbox" id="about-us" name="about-us" value="google">
+        <label for="about-us">REFERAL</label>
+        <input type="checkbox" id="about-us" name="about-us" value="referal">
 
-       <label for="about-us">REFERAL</label>
-       <input type="checkbox" id="about-us" name="about-us" value="referal">
-
-       <label for="about-us">YOUTUBE</label>
-       <input type="checkbox" id="about-us" name="about-us" value="youtube">
+        <label for="about-us">YOUTUBE</label>
+        <input type="checkbox" id="about-us" name="about-us" value="youtube">
+       </div>
+       
     </body>
 
-    <footer>
-        <p>No. 1 Benue Cresent, Wuse District, Zone 4, FCT, Abuja</p>
-        <p><a href="www.brightondentalng.com">brightondentalng.com</a></p>
-        <p><a href="mailto:info@brightondentalng.com">info@brightondentaing.com</a></p>
-        <p>+2347044333359</p>
+    <footer class="foot-cont">
+       <div class="street"> 
+        <p id="info">No. 1 Benue Cresent,</p>
+        <p id="info">Wuse District, Zone 4,</p>
+        <p id="info">FCT, Abuja</p>
+       </div>
+
+       <div class="details"> 
+        <p id="info"><a href="www.brightondentalng.com">www.brightondentalng.com</a></p>
+        <p id="info"><a href="mailto:info@brightondentalng.com">info@brightondentaing.com</a></p>
+        <p id="info">+2347044333359</p>
+       </div> 
     </footer>
 </html>
